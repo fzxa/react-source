@@ -381,7 +381,7 @@ performUpdateIfNecessary: function(transaction) {
 
 * 不建议在 getDefaultProps、getInitialState、shouldComponentUpdate、componentWillUpdate、render 和 componentWillUnmount 中调用 setState，特别注意：不能在 shouldComponentUpdate 和 componentWillUpdate 中调用 setState，会导致循环调用。
 
-参考资料
+### 参考资料
 Component API
 
 Component Specs and Lifecycle
