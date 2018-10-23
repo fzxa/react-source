@@ -324,8 +324,6 @@ replaceState 会先判断当前状态是否为 MOUNTING，如果不是即会调�
 
 如果在 shouldComponentUpdate 或 componentWillUpdate 中调用 setState，此时的状态已经从 RECEIVING_PROPS -> NULL，则 performUpdateIfNecessary 就会调用 updateComponent 进行组件更新，但 updateComponent 又会调用 shouldComponentUpdate 和 componentWillUpdate，因此造成循环调用，使得浏览器内存占满后崩溃。
 
-![image](http://ww2.sinaimg.cn/mw690/61ff3868gw1exemh6xiruj20d5099q3n.jpg)
-
 ```js
 // 更新 state
 setState: function(partialState, callback) {
