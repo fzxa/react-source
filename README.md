@@ -9,7 +9,7 @@ React 的主要思想是通过构建可复用组件来构建用户界面。所�
 
 有限状态机（FSM），表示有限个状态以及在这些状态之间的转移和动作等行为的模型。一般通过状态、事件、转换和动作来描述有限状态机，下面是描述组合锁状态机的模型图，包括5个状态、5个状态自转换、6个状态间转换和1个复位 RESET 转换到状态 S1。状态机，能够记住目前所处的状态，根据当前的状态可以做出相应的决策，并且在进入不同的状态时，可以做不同的操作。通过状态机将复杂的关系简单化，利用这种自然而直观的方式可以让代码更容易理解。
 
-![image](http://ww2.sinaimg.cn/mw690/61ff3868gw1exj0cvbc84j20ky0ag0tt.jpg)
+
 
 React 正是利用这一概念，通过管理状态来实现对组件的管理。例如，某个组件有显示和隐藏两个状态，通常会设计两个方法 show() 和 hide() 来实现切换；而 React 只需要设置状态setState({ showed: true/false }) 即可实现。同时，React 还引入了组件的生命周期概念。通过它就可以实现组件的状态机控制，从而达到 “生命周期－状态－组件” 的和谐画面。
 
@@ -51,7 +51,7 @@ ReactDom.render(<MyComponent />, body);
 
 * 当再次渲染组件时，组件接受到更新状态，此时按顺序执行 componentWillReceiveProps、shouldComponentUpdate、componentWillUpdate、render 和 componentDidUpdate。
 
-![image](http://ww1.sinaimg.cn/mw690/61ff3868gw1exj557o8c9j20w10d8dlx.jpg)
+
 
 ### 疑问
 * 为何 React 会按上述顺序执行生命周期？
